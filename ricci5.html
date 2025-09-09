@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>watch</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">Mathinik</a>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+   
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+ <a href="profile.html">
+               <img src="images/pic-1.jpg" class="image" alt="">
+
+      </a>
+      <h3 class="name" id="username">Loading...</h3>
+      <p class="role">Student</p>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="courses.html"><i class="fas fa-solid fa-book"></i><span>Handouts</span></a>
+      <a href="welcome.html"><i class="fas fa-chalkboard-user"></i><span>Game</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+   </nav>
+
+</div>
+
+<section class="watch-video">
+
+   <div class="video-container">
+      <div class="video">
+         <video src="cssvids/confi05.mp4" controls poster="images/post-2-2.png" id="video"></video>
+      </div>
+      <h3 class="title">Confidence Interval for a population proportion (05)</h3>
+      <div class="info">
+         <p class="date"><i class="fas fa-calendar"></i><span>22-10-2022</span></p>
+       
+      </div>
+      <div class="tutor">
+         <img src="images/pic-3.jpg" alt="">
+         <div>
+            <h3>Ricci Rivero</h3>
+         </div>
+      </div>
+      
+      <form action="" method="post" class="flex">
+         
+         <a href="css-playlist.html" class="inline-btn" >Back</a>
+      </form>
+
+    
+   </div>
+
+</section>
+
+
+
+
+<script src="js/script.js"></script>
+<script>
+        fetch('php/getuser.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('username').textContent = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('username').textContent = 'Guest';
+        });
+        </script>
+
+   
+</body>
+</html>

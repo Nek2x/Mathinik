@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grow the Plant Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/prog.css">
+
+</head>
+<body>
+
+  <div class="clouds"></div>
+  <div class="plants">
+    <div class="halaman"></div>
+    <div class="halamanbaba"></div>
+  </div>
+
+  <div class="progress" id="progress">Level:<span id="level-text" style="color: rgb(32, 228, 32);">Easy</span></div>
+
+  <div class="game-container">
+    <div class="plant-container">
+      <img src="plant1.png" id="plant" class="plant" alt="Plant Growth">
+      <img src="bubblemessage.png" class="speech-bubble" id="questionBubble">
+      <p class="bubble"></p>
+       
+    </div>
+        <div class="quiz-container" id="quiz">
+        <div class="choices" id="choices"></div>
+  </div>
+  </div>
+
+  <div id="feedback-container" style="display:none;" class="feedback-popup">
+        <div id="feedback-message"></div>
+        <button onclick="nextQuestion()">Next</button>
+</div>
+
+  <div id="id-feedback-container" style="display:none;" class="feedback-popup">
+        <div id="id-feedback-message"></div>
+        <button onclick="nextIdQuestion()">Next</button>
+</div>
+
+  <script>
+    
+  </script>
+
+  <script src="js/prog.js"></script>
+</body>
+</html>

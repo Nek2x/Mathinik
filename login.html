@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   <section class="container">
+      <div class="left-side">
+         <h2>Mathinik</h2>
+         <img src="images/loginform.png" alt="Illustration">
+      </div>
+      <div class="right-side">
+         <div class="form-container">
+            <h3>Create Account</h3>
+            <input type="text" name="fullname" placeholder="Username" required class="box">
+            <input type="email" name="email" placeholder="Email Address" required class="box">
+            <input type="password" name="password" placeholder="Password" required class="box">
+            
+            <a href="php/index.php">
+               <input type="submit" class="enter" value="Sign up" name="signUp">
+            </a>
+            <p>Already have an account? <a href="login2.html" class="register">Log in</a></p>
+         </div>
+      </div>
+   </section>
+
+   <script src="login.js"></script>
+   <style>
+   
+   body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+   }
+   .container {
+      display: flex;
+      width: 900px;
+      height: 500px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      margin-right: 300px;
+      font-family: 'Nunito', sans-serif;
+   }
+   .left-side {
+      flex: 1;
+      background: #4A47A3;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 10px;
+
+   }
+   .left-side img {
+      max-width: 100%;
+   }
+   .right-side {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+   }
+   .form-container {
+      width: 90%;
+      max-width: 350px;
+      padding: 2rem;
+      border-radius: .5rem;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+   }
+   .form-container h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+   }
+
+   .facebook {
+      background: #1877f2;
+   }
+   .box {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+   }
+   .enter {
+      display: block;
+      width: 100%;
+      background: linear-gradient(to left, #4776E6, #8e54e9);
+      color: white;
+      padding: 0.8rem;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
+      letter-spacing: 0.5px;
+      
+   }
+
+   .enter:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #4776E6, #8e54e9);
+}
+
+   .register {
+      display: block;
+      margin-top: 0.5rem;
+      color: #006BFF;
+      text-decoration: underline;
+      font-size: 15px;
+   }
+
+   h2{
+      font-family: 'Nunito', sans-serif;
+      font-size: 3.5rem;
+   }
+
+   p{
+      font-family:  'Nunito', sans-serif;
+      font-size: 15px;
+      margin-top: 8px;
+   }
+
+</style>
+</body>
+</html>

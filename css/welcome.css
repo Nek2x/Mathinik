@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'MathinikFont';
+  src: url('MathinikFont.ttf') format('truetype');
+}
+
+.welcome-text {
+  font-family: 'Arbutus';
+  font-size: 110px;
+  letter-spacing: 5px;
+  position: relative;
+  top: 50%;
+  left: 18%;
+  color: #fff;
+  text-shadow: 2px 8px #2f585c, -2px -8px #2f585c;
+  text-align: center;
+  margin-top: 120px;
+  z-index: 10;
+  display: inline-block; 
+  
+
+}
+
+
+html, body {
+margin: 0;
+padding: 0;
+height: 100%;
+width: 100%;
+overflow: hidden;
+
+}
+
+.damuhan {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url('../damuhan.jpg');
+background-size: cover;
+background-position: center;
+z-index: -2;
+}
+
+.clouds {
+position: fixed;
+top: 0;
+left: 0;
+width: 150%;
+height: 700px;
+background-image: url('../ulap.png');
+background-size: cover;
+background-repeat: repeat-x;
+z-index: -1;
+animation: moveClouds 60s linear infinite;
+}
+
+@keyframes moveClouds {
+from {
+    background-position: 0 0;
+}
+to {
+    background-position: 720px 0; 
+}
+}
+
+.background, .apple-animation {
+  width: 700px;
+  height: 800px;
+  background-size: calc(700px * 7) 500px;
+  background-image: url('../punoito.png');
+  background-repeat: no-repeat;
+  image-rendering: pixelated; 
+}
+
+.left-tree, .left-apple {
+  position: fixed;
+  top: 90%;
+  left: -250px;
+  z-index: 0;
+}
+
+.left-tree {
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.left-apple {
+  animation: animateApple 6s steps(7) infinite;
+  z-index: 1;
+  transform: translateY(-40%) scale(1.4) scaleX(-1);
+}
+
+.right-tree, .right-apple {
+  position: fixed;
+  top: 90%;
+  right: -295px;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.right-apple {
+  animation: animateApple 6s steps(7) infinite;
+  z-index: 1;
+  transform: translateY(-40%) scale(1.4);
+}
+
+@keyframes animateApple {
+  from { background-position: 0 0; }
+  to   { background-position: calc(-700px * 7) 0; }
+}
+
+
+
+
+.dialog-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  background: black;
+  color: #ccc;
+  padding: 30px 20px;
+  border: 3px solid white;
+  border-radius: 10px;
+  display: none;
+  z-index: 10;
+  text-align: center;
+}
+
+.dialog-box h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.dialog-box p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
+
+.play-button {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 250px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+}
+
+.play-button img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.play-button:hover img {
+  transform: scale(1.2);
+}
+
+.agree,
+.disagree,
+.return {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 5px;
+}
+
+.agree:hover,
+.disagree:hover,
+.return:hover {
+  background: white;
+  color: black;
+}

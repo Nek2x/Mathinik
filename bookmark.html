@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Update</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="bookmark.css">
+</head>
+<body>
+
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Mathinik</a>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">  
+         <a href="profile.html" class="btn">View Profile</a>
+         <div class="flex-btn">
+            <a href="php/logout.php" class="option-btn">Logout</a>
+         </div>
+      </div>
+   </section>
+</header>   
+
+<div class="side-bar">
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <a href="profile.html">
+         <img src="images/pic-1.jpg" class="image" alt="">
+      </a>
+      <h3 class="name" id="username">Loading...</h3>
+      <p class="role">Student</p>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="courses.html"><i class="fas fa-book"></i><span>Handouts</span></a>
+      <a href="welcome.html"><i class="fas fa-chalkboard-user"></i><span>Game</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+   </nav>
+</div>
+
+<section class="update-container">
+   <form action="php/update.php" method="post" enctype="multipart/form-data">
+      <h3>Bookmark Lessons</h3>
+      <ul id="bookmarkList" class="box">
+       
+      </ul>
+   </form>
+</section>
+
+
+
+
+<script src="js/script.js"></script>
+<script>
+fetch('php/getuser.php')
+   .then(response => response.text())
+   .then(data => {
+      document.getElementById('username').textContent = data || 'Guest';
+   })
+   .catch(error => {
+      console.error('Error:', error);
+      document.getElementById('username').textContent = 'Guest';
+   });
+</script>
+
+<section class="bookmarks-list">
+  <ul id="bookmark-list"></ul>
+</section>
+
+ <script>
+document.addEventListener('DOMContentLoaded', () => {
+  let bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
+  const list = document.getElementById('bookmarkList'); // from your HTML, the ul where bookmarks show
+
+  function renderBookmarks() {
+    list.innerHTML = '';
+
+    if (bookmarks.length === 0) {
+      list.innerHTML = '<li>No bookmarks yet.</li>';
+      return;
+    }
+
+    bookmarks.forEach((bookmark, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <a href="${bookmark.link}">${bookmark.title}</a>
+        <button class="remove-btn" data-index="${index}" style="margin-left:10px;">Remove</button>
+      `;
+      list.appendChild(li);
+    });
+
+    // Add click handlers for remove buttons
+    document.querySelectorAll('.remove-btn').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const idx = e.target.getAttribute('data-index');
+        bookmarks.splice(idx, 1);
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+        renderBookmarks();
+      });
+    });
+  }
+
+  renderBookmarks();
+});
+</script>
+
+
+
+
+
+</body>
+</html>

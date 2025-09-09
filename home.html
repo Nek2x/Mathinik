@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+
+ 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" /> 
+   <link rel="stylesheet" href="css/home.css">
+
+</head>
+<body>
+
+       
+    <header class="header">
+
+        <section class="flex">
+
+            <a href="home.html" class="logo">Mathinik</a>
+
+
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+            <div class="profile">
+                <img src="images/pic-1.jpg" class="image" alt="">
+                <a href="profile.html" class="btn">view profile</a>
+               
+                    
+                         <form action="/php/logout.php" >
+                        <a href="php/logout.php" class="btn" >Logout</a>
+                            
+              </div>
+            </div>
+
+        </section>
+
+    </header>
+
+    <div class="side-bar">
+
+        <div id="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile">
+            <a href="profile.html ">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            </a>
+            <h3 class="name" id="username">Loading...</h3>
+            <p class="role">Student</p>
+        </div>
+
+        <nav class="navbar">
+            <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="courses.html"><i class="fas fa-solid fa-book"></i><span>Handouts</span></a>
+            <a href="welcome.html"><i class="fas fa-chalkboard-user"></i><span>Game</span></a>
+            <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+        </nav>
+
+    </div>
+
+    <section class="home-grid">
+
+
+
+        <div class="box-container">
+
+
+
+            <div class="box">
+                <h3 class="title">popular topics</h3>
+                <div class="flex">
+                    <a href="maris2.html"><i class="fas fa-percentage"></i><span>Cumulative Probability</span></a>
+                    <a href="ricci4.html"><i class="fas fa-infinity"></i><span>Calculating Sample Size (N)</span></a>
+                    <a href="josh4.html"><i class="fab fa-css3"></i><span>One Tailed vs Two Tailed</span></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3 class="title">Begin Your Learning Journey</h3>
+                <a href="courses.html" class="inline-btn">get started</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="container">
+        <main>
+            <h1 class="opt">Your Progress</h1>
+
+            <div class="insights">
+
+
+                <div class="income">
+               
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Progress </h3>
+                           
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle r="25" cy="1" cx="95"> </circle>
+                            </svg>
+                            <div class="number">50%</div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div class="recent_activity">
+                       
+                        <h2>Recent Activity</h2>
+                        <div class="activity">
+                            <div class="profilephoto">
+                              <img src="images/star.png" alt="">
+                            </div>
+                            <div class="message">
+                                <p><b>Finished</b> 01!</p>
+                            </div>
+
+                        </div>
+                        <div class="activity">
+                            <div class="profilephoto">
+                                <img src="images/star.png" alt="">
+                            </div>
+                            <div class="message">
+                                <p><b>Finished</b> 02!</p>
+                            </div>
+
+                        </div>
+                        <div class="activity">
+                            <div class="profilephoto">
+                                <img src="images/star.png" alt="">
+                            </div>
+                            <div class="message">
+                                <p><b>Finished</b> 03!</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+         </div>
+    </main>
+
+
+
+    </div>
+
+    </div>
+
+            
+        <script src="js/script.js"></script>
+
+            <script>
+        fetch('php/getuser.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('username').textContent = data;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('username').textContent = 'Guest';
+        });
+        </script>
+
+</body>
+</html>

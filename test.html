@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+ 
+    <header class="header">
+   
+        <section class="flex">
+     
+           <a href="home.html" class="logo">CodeCraft</a>
+     
+         
+     
+           <div class="icons">
+              <div id="menu-btn" class="fas fa-bars"></div>
+              <div id="user-btn" class="fas fa-user"></div>
+              <div id="toggle-btn" class="fas fa-sun"></div>
+           </div>
+     
+           <div class="profile">
+              <img src="images/pic-1.jpg" class="image" alt="">
+              <h3 class="name">Anthony Jennings</h3>
+              <p class="role">Student</p>
+              <a href="profile.html" class="btn">view profile</a>
+              <div class="flex-btn">
+                 <a href="login.html" class="option-btn">logout</a>
+              </div>
+           </div>
+     
+        </section>
+     
+     </header>   
+     
+</header>
+
+
+
+<div class="container">
+<main>
+    <h1 class="opt">Quick Option</h1>
+
+<div class="insights">
+
+    <div class="sales">
+        <span class="material-symbols-outlined">trending_up  </span>
+        <div class="middle">
+            <div class="left">
+                <h3 class="prog">total progress</h3>
+                <h1>HTML</h1>
+            </div>
+            <div class="progress">
+                <svg>
+                    <circle r="30"  cy="40" cx="40"> </circle>
+                </svg>
+                <div class="number">80%</div>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+    <div class="expenses">
+        <span class="material-symbols-outlined">local_mall </span>
+        <div class="middle">
+            <div class="left">
+                <h3>total expenses </h3>
+                <h1>CSS</h1>
+            </div>
+            <div class="progress">
+                <svg>
+                    <circle r="30"  cy="40" cx="40"> </circle>
+                </svg>
+                <div class="number">80%</div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    
+
+    <div class="income">
+        <span class="material-symbols-outlined">stacked_line_chart </span>
+        <div class="middle">
+            <div class="left">
+                <h3>total progress </h3>
+                <h1>JAVA</h1>
+            </div>
+            <div class="progress">
+                <svg>
+                    <circle r="30"  cy="40" cx="40"> </circle>
+                </svg>
+                <div class="number">100%</div>
+            </div>
+
+        </div>
+      
+    </div>
+    <div class="right">
+        <div class="recent_activity"><!--start recent act-->
+            <h2>recent activity</h2> 
+            <div class="activity">
+             <div class="profilephoto">
+                 <img src="maris.jpg" alt="cheater">
+             </div>
+             <div class="message">
+                 <p><b>maris</b> cheated</p>
+             </div>
+             
+            </div>
+            <div class="activity">
+                <div class="profilephoto">
+                    <img src="maris.jpg" alt="cheater">
+                </div>
+                <div class="message">
+                    <p><b>maris</b> cheated</p>
+                </div>
+                
+               </div>
+               <div class="activity">
+                <div class="profilephoto">
+                    <img src="maris.jpg" alt="cheater">
+                </div>
+                <div class="message">
+                    <p><b>maris</b> cheated</p>
+                </div>
+                
+               </div>
+         
+         </div><!--end recent act-->
+        </div>
+     
+
+</div>
+
+
+
+</div><!--saiba to-->
+
+ 
+<div class="courses"><!--start of courses-->
+
+<H1>OUR COURSES</H1>
+    </div><!--end of courses-->
+
+    <div class="box_course"><!--start of box-->
+
+    <div class="htmlbox">
+    <img src="htmllogo.jpg" alt="coursenihtml">
+    <h4>Complete HTML Tutorial</h4>
+    <button type="button">View Course</button>
+    </div>
+
+    <div class="javabox">
+        <img src="java.jpg" alt="coursenijava">
+        <h4>Complete JAVA Tutorial</h4>
+        <button type="button">View Course</button>
+    </div>
+    
+    <div class="cssbox">
+  
+        <img src="css.jpg" alt="coursenicss">
+        <h4>Complete CSS Tutorial</h4>
+        <button type="button">View Course</button>
+    </div>
+    
+
+</div><!--end of box-->
+
+
+
+
+</main>
+
+
+
+</div>
+
+<div class="sidebar">
+
+
+
+    <div class="profile">
+        <img src="dog.jpg.jpg" alt="Profile Picture">
+        <h3>Rover Babyko</h3>
+        <span>Student</span>
+        <a href="" class="btn">View Profile</a>
+       
+    </div>
+
+<nav class="navbar">
+    <a href="Home.html"><i class="fas fa-home"></i><span>home</span></a>
+    <a href="about.html"><i class="fas fa-question"></i><span>about us</span></a>
+    <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
+    <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>quizzes</span></a>
+</nav>
+
+</div>
+
+
+
+
+
+
+
+<script>
+    let body = document.body;
+    let profile = document.querySelector('.header .flex .profile');
+    
+    document.querySelector('#user-btn').onclick = () => {
+        profile.classList.toggle('active');
+    }
+    let sidebar = document.querySelector('.sidebar');
+    
+    document.querySelector('#menu-btn').onclick = () => {
+sidebar.classList.toggle('active');
+ body.classList.toggle('active');
+    }
+    
+    window.onscroll = () => {
+        profile.classList.remove('active');
+    };
+</script>
+</body>
+</html>

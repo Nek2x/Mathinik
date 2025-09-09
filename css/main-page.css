@@ -1,0 +1,170 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: monospace;
+  color: #2b3a42;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #fff100;
+}
+
+.login {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #5871b4;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.login:hover {
+  color: #fff100;
+}
+
+.welcome-section {
+  background: url('images/main.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  
+}
+
+h1{
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-size: 80px;
+  padding-left: 20px;
+  margin-top: 9%;
+  letter-spacing: 2px;
+  color: #08c2ff;
+}
+.welcome-section h1 {
+  font-size: 8.2rem;
+  font-family: "IM Fell English", serif;
+}
+
+.welcome-section span {
+  color: yellow;
+}
+
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: rgb(55, 48, 48);
+  color: wheat;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-title {
+  flex: 1;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.about-details {
+  flex: 2;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-left: 20px;
+}
+
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: rgb(147, 77, 128);
+  font-family: 'Poppins', sans-serif;
+  color: wheat;
+}
+
+.contact-title {
+  flex: 1;
+  text-align: right;
+  font-size: 2rem;
+}
+
+.contact-details {
+  flex: 2;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-right: 20px;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: yellow;
+}
+
+
+@media (max-width: 768px) {
+  .welcome-section h1 {
+     font-size: 2.5rem;
+  }
+
+  .about-section,
+  .contact-section {
+     flex-direction: column;
+     text-align: center;
+  }
+
+  .about-title,
+  .about-details,
+  .contact-title,
+  .contact-details {
+     margin: 0;
+  }
+
+  .about-details,
+  .contact-details {
+     margin-top: 20px;
+  }
+}

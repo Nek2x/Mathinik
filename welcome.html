@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Arbutus&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="css/welcome.css">
+  <title>Mathinik Welcome</title>
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div class="welcome">
+    <h1 class="welcome-text">Welcome to <br> Mathinik</h1>
+    <a href="prog.html" class="start-button">&gt;</a>
+  </div>
+  
+  <div class="damuhan">
+  </div>
+  <div class="clouds">
+
+  </div>
+  <div class="background left-tree"></div>
+  <div class="apple-animation left-apple"></div>
+
+  <div class="background right-tree"></div>
+  <div class="apple-animation right-apple"></div>
+
+  <div class="play-button-wrapper">
+  <button class="play-button" onclick="showprivacy()">
+    <img src="pindot.png" alt="">
+  </button>
+  </div>
+
+  <div class="dialog-box" id="rulesDialog">
+    <h2>Privacy Policy and Terms of Use</h2>
+    <p>
+      Welcome to Mathinik!<br /><br />
+      We collect data to enhance your gameplay experience. Please read our policies to learn how we handle your data.<br /><br />
+      By clicking "Agree", you accept our game rules and privacy terms.
+    </p>
+    <div class="dialog-buttons">
+      <button class="disagree" onclick="hideprivacy()">Disagree</button>
+      <button class="return" onclick="location.href='home.html'">Return</button>
+      <button class="agree" onclick="location.href='prog.html'">Agree</button>
+    </div>
+  </div>
+
+  <script>
+    function showprivacy() {
+      document.getElementById("rulesDialog").style.display = "block"; /*block naman is visible*/
+    }
+
+    function hideprivacy() {
+      document.getElementById("rulesDialog").style.display = "none"; /*none is hinahide niya*/
+    }
+  </script>
+
+</body>
+</html>
