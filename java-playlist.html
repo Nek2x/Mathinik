@@ -151,16 +151,10 @@
 
 <script src="js/script.js"></script>
 <script>
-        fetch('php/getuser.php')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('username').textContent = data;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('username').textContent = 'Guest';
-        });
-        </script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("username").textContent = "Guest";
+    });
+</script>
 
    <script>
      

@@ -49,7 +49,7 @@
       <a href="profile.html ">
       <img src="images/pic-1.jpg" class="image" alt="">
       </a>
-      <h3 class="name" id="username">Loading...</h3>
+      <h3 class="name" id="username">Your Name</h3>
       <p class="role">Student</p>
    </div>
 
@@ -83,8 +83,7 @@
  
 <script src="js/script.js"></script>
 <script>
-        fetch('php/getuser.php')
-        .then(response => response.text())
+        then(response => response.text())
         .then(data => {
             document.getElementById('username').textContent = data;
         })
